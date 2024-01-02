@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --cor-1:#45294C;
+            --cor-2:#A9B5C4;
+            --cor-3:#C5D0D8;
+            --cor-4:#8492AB;
+            --cor-5:#23849E;
+            --cor-6:#3AB3DD;
+        }
+        body {
+            background: var(--cor-2);
+            margin: 0;
+            font-size: 3em;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .caixa {
+            width: 60%;
+            background-color: var(--cor-3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            box-shadow: 21px 21px 5px var(--cor-1);
+            
+            } 
+            .caixa2 {
+            width: 98%;
+            background-color: var(--cor-5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            } 
+        .card {
+            width: 60vw;
+            max-width: 20vw;
+            min-width:10vw ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+        .card:hover {
+            width: 60vw;
+            max-width: 20vw;
+            min-width:10vw ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+            margin-bottom: 5px;
+            box-shadow: 2px 2px 10px var(--cor-1);
+        }
+        
+        .card2 {
+            width: 70%;
+            max-width: 50vw;
+            min-width: 20vw;
+            background: #5B409B;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 60px 0.5px var(--cor-6);
+            
+        }
+
+        img {
+            width:20vw;
+            max-width: 150vw;
+            min-width:20vw ;
+        }
+        .dp_left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+        .dp_right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        .textfield {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 8px;
+            
+        }
+        .textfield label {
+            
+            text-align: center;
+            align-items: flex-start;
+            font-size: 0.3em;
+            color: #cbe3e9;
+            margin-bottom: 3px;
+        }
+        .textfield input {
+           width: 95%;
+            text-align: center;
+            background: var(--cor-4);
+            padding: 3px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            transition: all 0.5s;
+            box-shadow: 2px 2px 8px var(--cor-1);
+            outline: none;
+        }
+        .textfield input:hover {
+           width: 90%;
+            text-align: center;
+            background: var(--cor-5) 50%;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            transition: all 0.5s;
+            box-shadow: 2px 2px 2px var(--cor-1);
+            opacity: 80%;
+        }
+        .textfield input:focus {
+           width: 90%;
+            text-align: center;
+            background: var(--cor-5) 50%;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            box-shadow: 2px 2px 2px var(--cor-1);
+            opacity: 80%;
+        }
+
+        h1{ 
+            font-size: 0.5em;
+            color:#EAB053; 
+            letter-spacing: 4px;
+            text-shadow: 2px 1px 10px var(--cor-1);
+        }
+        .but {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: none;
+        }
+
+        .but a {
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 4px;
+            border: none;
+            font-size: 0.9em;color: var(--cor-1);
+            color: var(--cor-3);
+        }
+        .but a:hover {
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 4px;
+            border: none;
+            font-size: 0.9em;
+            color: var(--cor-3);
+        }
+        button {
+            border: none;
+            border-radius: 2px;
+            background: var(--cor-5);
+            box-shadow: 2px 2px 8px var(--cor-1);
+            transition: all 0.5s;
+        }
+        button:hover {
+            border: none;
+            border-radius: 2px;
+            background: var(--cor-1);
+            box-shadow: 2px 2px 8px var(--cor-5);
+            transition: all 0.5s;
+            margin-top: 3px;
+            margin-right: 3px;
+        }
+
+        .end {
+            width: 100%;
+            font-size: 0.2em;
+            text-align: center;
+        }
+
+        .end a {
+            color: var(--cor-4);
+            text-decoration: none;
+        }
+        .end a:hover {
+            text-decoration: underline;
+        }
+    .reset {
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+    }
+        .reset a{
+            font-size: 0.2em;
+            color: var(--cor-4);
+            text-decoration: none;
+        }
+        .reset a:hover {
+            text-decoration: underline;
+        }
+        .rod {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            font-size: 0.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="caixa">
+    <div class="caixa2">
+        <div class="card">
+            <div class="dp_left">
+            <img src="imagens/pngegg.png">
+        </div>
+        </div>
+        <div class="card2">
+            <div class="dp_right">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="">Usuario:</label>
+                    <input type="text">
+                </div>
+                <div class="textfield">
+                    <label for="">Senha:</label>
+                    <input type="password">
+                </div>
+                <div class="reset"><a href="">Resetar senha</a></div>
+                <div class="but">
+                <button><a href="">LOGAR</a></button>
+            </div>
+            <div class="end"><a href="">Criar cadastro</a></div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="rod"> &copy; Copyright 2000-2023 Yxnch</div>
+</body>
+</html>
